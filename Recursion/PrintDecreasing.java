@@ -7,10 +7,6 @@ Approach:
 - Then make recursive call with (n-1)
 - This ensures numbers are printed in decreasing order
 
-Example:
-Input: 10
-Output: 10 9 8 7 6 5 4 3 2 1
-
 Complexity:
 Time: O(n)
 Space: O(n) (recursion stack)

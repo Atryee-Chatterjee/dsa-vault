@@ -10,12 +10,6 @@ Approach:
 - Recursive case: Multiply n with factorial(n - 1)
 - The function keeps calling itself until it reaches 0
 
-Example:
-Input: 5
-Output: 120
-Explanation:
-factorial(5) = 5 * 4 * 3 * 2 * 1 = 120
-
 Complexity:
 - Time: O(n)
 - Space: O(n) (due to recursion call stack)

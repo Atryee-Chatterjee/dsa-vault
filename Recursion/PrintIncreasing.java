@@ -7,10 +7,6 @@ Approach:
 - Then print current number n
 - This ensures numbers are printed in increasing order
 
-Example:
-Input: 5
-Output: 1 2 3 4 5
-
 Complexity:
 Time: O(n)
 Space: O(n) (due to recursion stack)

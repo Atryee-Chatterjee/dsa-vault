@@ -15,7 +15,7 @@ Approach:
   - Return their sum
 
 Complexity:
-- Time: O(2^n) (very slow due to repeated calculations)
+- Time: O(2^n) (Expo, very slow due to repeated calculations)
 - Space: O(n) (recursion stack)
 
 Notes:
