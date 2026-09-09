@@ -2,32 +2,24 @@
 Problem: Implement a Singly Linked List
 
 Approach:
-- Create a Node class to store data and a reference to the next node
-- Maintain two pointers: head and tail
-- addFirst():
-  - Create a new node
-  - If the list is empty, make the new node both head and tail
-  - Otherwise, connect the new node to the current head
-  - Update head to the new node
-- addLast():
-  - Create a new node
-  - If the list is empty, make the new node both head and tail
-  - Otherwise, connect the new node after the current tail
-  - Update tail to the new node
-- print():
-  - Start from head and traverse the list using the next reference
-  - Print each node's data until reaching null
+
+- Create a Node class with data and next reference
+- Maintain head, tail, and size
+- addFirst(): Insert a node at the beginning and update head
+- addLast(): Insert a node at the end and update tail
+- print(): Traverse from head and print all nodes
 
 Complexity:
+
 addFirst(): Time O(1), Space O(1)
 addLast(): Time O(1), Space O(1)
 print(): Time O(n), Space O(1)
 
 Key Idea:
+
 - head points to the first node
 - tail points to the last node
-- Each node stores data and a reference to the next node
-- Using both head and tail makes insertion at both ends efficient
+- size tracks the number of nodes
 */
 package LinkedList;
 
@@ -44,10 +36,12 @@ public class LinkedListBasics {
 
     public static Node head;
     public static Node tail;
+    public static int size;
 
     public void addFirst(int data) {
         // Step1 = create new node
         Node newNode = new Node(data);
+        size++;
         if (head == null) {
             head = tail = newNode;
             return;
@@ -61,6 +55,7 @@ public class LinkedListBasics {
 
     public void addLast(int data) {
         Node newNode = new Node(data);
+        size++;
         if (head == null) {
             head = tail = newNode;
             return;
@@ -80,17 +75,13 @@ public class LinkedListBasics {
 
     public static void main(String[] args) {
         LinkedListBasics ll = new LinkedListBasics();
-        
-        ll.print();
+
         ll.addFirst(1);
-        ll.print();
         ll.addFirst(2);
-        ll.print();
         ll.addLast(3);
-        ll.print();
-        ll.addLast(4);
-        ll.print();
         ll.addFirst(10);
         ll.print();
+        System.out.println(size);
+
     }
 }
