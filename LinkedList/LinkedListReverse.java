@@ -1,3 +1,22 @@
+/*
+Problem: Reverse a Singly Linked List
+
+Approach:
+- Use three pointers: prev, curr, and next
+- Store the next node before changing the current node's link
+- Reverse curr.next to point to prev
+- Move all pointers forward
+- Update head to prev after the traversal
+- Update tail to the original head
+
+Complexity:
+Time: O(n)
+Space: O(1)
+
+Key Idea:
+- Reverse each node's next pointer one by one
+- prev becomes the new head after the reversal
+*/
 package LinkedList;
 
 public class LinkedListReverse {
