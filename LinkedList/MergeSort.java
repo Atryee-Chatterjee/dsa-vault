@@ -105,7 +105,7 @@ public class MergeSort {
         // Find mid
         Node mid = getMid(head);
 
-        // Left && Right MS
+        // Left & Right MS
         Node rightHead = mid.next;
         mid.next = null;
         Node newLeft = mergeSort(head);
@@ -124,7 +124,7 @@ public class MergeSort {
         ll.addFirst(5);
         ll.print();
 
-        ll.head = ll.mergeSort(head);
+        ll.head = ll.mergeSort(ll.head);
         ll.print();
 
     }
