@@ -1,0 +1,59 @@
+/*
+Problem: Reverse a Stack using Recursion
+
+Approach:
+- Pop the top element recursively until the stack becomes empty
+- After reaching the bottom, insert each removed element at the bottom
+- Use pushAtBottom() to place elements at the bottom of the stack
+- This reverses the order of all elements
+
+Complexity:
+Time: O(n²)
+Space: O(n)
+
+Key Idea:
+- Recursion removes elements from the top
+- pushAtBottom() restores them in reverse order
+- No extra stack or data structure is used
+*/
+package Stacks;
+import java.util.*;
+
+public class ReverseStack {
+    public static void pushAtBottom(Stack<Integer> s, int data) {
+        if (s.isEmpty()) {
+            s.push(data);
+            return;
+        }
+        int top = s.pop();
+        pushAtBottom(s, data);
+        s.push(top);
+    }
+
+    public static void reverseStack(Stack<Integer> s) {
+        if (s.empty()) {
+            return;
+        }
+        int top = s.pop();
+        reverseStack(s);
+        pushAtBottom(s, top);
+    }
+
+    public static void printStack(Stack<Integer> s) {
+        while (!s.empty()) {
+            System.out.println(s.pop());
+        }
+    }
+
+    public static void main(String[] args) {
+        Stack<Integer> s = new Stack<>();
+
+        s.push(1);
+        s.push(2);
+        s.push(3);
+        // 3, 2, 1
+        reverseStack(s);
+        printStack(s);
+        // 1, 2, 3
+    }
+}
