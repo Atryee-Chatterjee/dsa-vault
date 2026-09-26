@@ -31,7 +31,7 @@ public class ReverseStack {
     }
 
     public static void reverseStack(Stack<Integer> s) {
-        if (s.empty()) {
+        if (s.isEmpty()) {
             return;
         }
         int top = s.pop();
@@ -40,7 +40,7 @@ public class ReverseStack {
     }
 
     public static void printStack(Stack<Integer> s) {
-        while (!s.empty()) {
+        while (!s.isEmpty()) {
             System.out.println(s.pop());
         }
     }
