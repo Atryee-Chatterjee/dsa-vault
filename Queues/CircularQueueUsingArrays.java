@@ -51,6 +51,7 @@ public class CircularQueueUsingArrays {
                 System.out.println("Queue is full");
                 return;
             }
+            // add first element
             if (front == -1) {
                 front = 0;
             }
@@ -64,6 +65,7 @@ public class CircularQueueUsingArrays {
                 return -1;
             }
             int result = arr[front];
+            // last element delete
             if (rear == front) {
                 rear = front = -1;
             } else {
