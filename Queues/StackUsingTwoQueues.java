@@ -57,14 +57,12 @@ public class StackUsingTwoQueues {
                     q2.add(top);
                 }
             } else { // Case 2
-                if (!q2.isEmpty()) {
-                    while (!q2.isEmpty()) {
-                        top = q2.remove();
-                        if (q2.isEmpty()) {
-                            break;
-                        }
-                        q1.add(top);
+                while (!q2.isEmpty()) {
+                    top = q2.remove();
+                    if (q2.isEmpty()) {
+                        break;
                     }
+                    q1.add(top);
                 }
             }
             return top;
@@ -84,11 +82,9 @@ public class StackUsingTwoQueues {
                     q2.add(top);
                 }
             } else { // Case 2
-                if (!q2.isEmpty()) {
-                    while (!q2.isEmpty()) {
-                        top = q2.remove();
-                        q1.add(top);
-                    }
+                while (!q2.isEmpty()) {
+                    top = q2.remove();
+                    q1.add(top);
                 }
             }
             return top;
