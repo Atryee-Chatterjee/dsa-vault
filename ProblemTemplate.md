@@ -1,6 +1,6 @@
-# <Problem Name>
 
-## Link
+
+## Problem Name
 
 <problem link>
 
@@ -8,12 +8,6 @@
 
 * Write in 2–3 lines what i did
 * Example: Used HashMap to store values and check complement
-
-## Code (Java)
-
-```java
-// My code here
-```
 
 ## Complexity
 
@@ -24,3 +18,9 @@ Space: O( )
 
 * What i learned
 * Any key idea or trick
+
+## Code (Java)
+
+```java
+// My code here
+```
