@@ -1,3 +1,24 @@
+/*
+Problem: Activity Selection
+
+Approach:
+- Store each activity's index, start time, and end time in a 2D array
+- Sort activities by their ending times in ascending order
+- Select the first activity because it finishes earliest
+- Traverse the remaining activities
+- Select an activity if its start time is greater than or equal to the last selected activity's end time
+- Update the lastEnd time after selecting an activity
+- Store the selected activity indices and print the maximum count
+
+Complexity:
+Time: O(n log n)
+Space: O(n)
+
+Key Idea:
+- Greedily select the activity that finishes earliest
+- Choosing activities with earlier end times leaves more room for future activities
+- Only non-overlapping activities can be selected
+*/
 package GreedyAlgorithms;
 
 import java.util.*;
