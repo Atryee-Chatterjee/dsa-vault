@@ -196,6 +196,31 @@ public class AdvancedPatterns {
         }
     }
 
+    // PALINDROMIC NUMBER PATTERN
+    public static void palindromicNumberPattern(int n) {
+
+        // Outer loop - rows
+        for (int i = 1; i <= n; i++) {
+
+            // Spaces
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print("  ");
+            }
+
+            // Descending numbers
+            for (int j = i; j >= 1; j--) {
+                System.out.print(j + " ");
+            }
+
+            // Ascending numbers
+            for (int j = 2; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
 
         hollowRectangle(4, 6);
@@ -208,5 +233,6 @@ public class AdvancedPatterns {
         // solidRhombus(5);
         // hollowRhombus(5);
         // diamond(4);
+        // palindromicNumberPattern(5);
     }
 }
